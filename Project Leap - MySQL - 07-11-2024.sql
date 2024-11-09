@@ -18,4 +18,3 @@ CREATE TABLE transactions (
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (accountNumber) REFERENCES accounts(accountNumber)
 );
-

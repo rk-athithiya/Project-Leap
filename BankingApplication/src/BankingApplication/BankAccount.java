@@ -15,7 +15,7 @@ public class BankAccount {
 
     // Constructor
     public BankAccount(String accountNumber, String accountHolderName, String accountType, 
-                       double balance, String address, String contactNumber) {
+                       String address, String contactNumber) {
         if (!isValidAccountNumber(accountNumber)) {
             throw new IllegalArgumentException("Account number must be between 8 and 16 characters.");
         }
@@ -78,7 +78,7 @@ public class BankAccount {
             this.withdraw(amount);
             toAccount.deposit(amount);
             transactionHistory.add("Transferred: " + amount + " to " + toAccount.getAccountNumber());
-            toAccount.transactionHistory().add("Received: " + amount + " from " + this.getAccountNumber());
+            toAccount.transactionHistory.add("Received: " + amount + " from " + this.getAccountNumber());
         } else {
             System.out.println("Insufficient balance or invalid transfer amount.");
         }
